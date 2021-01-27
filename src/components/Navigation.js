@@ -19,7 +19,7 @@ const Navigation = () => {
                </h1>
             </div>
             <div style={{alignItems: 'center', marginLeft: 'auto'}}>
-               <NavLink to="/Profile">Welcome {data.profile.firstName}</NavLink>
+               <NavLink to="/Profile">Mikael Hinton Welcome {data.profile.firstName}</NavLink>
             </div>
        </div>
     );
