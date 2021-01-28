@@ -4,12 +4,13 @@ import { data } from "../data";
 const Details = (props) => {
    
    var PROPID = props.location.aboutProps.name;
+   
    return (
        <div style={{textAlign:'center', paddingLeft:'35%', marginRight:'35%'}}>
                              
-         {data.data.features.filter(x => x.id === PROPID).map(data => (
+         {data.data.features.filter(x => x.id === PROPID).map((data) => (
                   
-            <div style ={{paddingLeft:'10%', paddingRight:'10%'}}>
+            <div key = {data.id} style ={{paddingLeft:'10%', paddingRight:'10%'}}>
                <h2 style={{paddingBottom:'2%', textAlign:'center'}}>{data.properties.title}</h2>
             <div style={{display: 'flex', paddingLeft:'10%'}}>
                <div style={{width:'100%', textAlign:'left', justifyContent:'left', fontWeight:'bold', paddingLeft:'5%', marginRight:'-40%'}}>
