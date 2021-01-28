@@ -4,8 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { data } from '../data';
  
 const Navigation = () => {
-    return (
-       
+    return (   
        <div style={{display: 'flex', backgroundColor: 'lightgrey', height:'125px', padding:'10px', alignItems: 'center'}}>
           <div style ={{marginRight: 'auto'}}>
                <NavLink to="/">
@@ -23,6 +22,5 @@ const Navigation = () => {
             </div>
        </div>
     );
-}
- 
+} 
 export default Navigation;

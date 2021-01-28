@@ -9,9 +9,6 @@ function convertTime(time) {
 };
 
 const home = () => {
-
- 
-
     return (
        <div style={{ paddingLeft:'30%', paddingRight:'30%'}}>
           <h1 style={{textAlign:'center'}}>{data.data.metadata.title}</h1>
@@ -48,9 +45,7 @@ const home = () => {
                     </h4>
                 </div>
             </div>
-       </div>
-       
+       </div>    
     );
 }
- 
 export default home;

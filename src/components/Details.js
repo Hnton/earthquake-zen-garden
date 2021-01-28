@@ -6,10 +6,8 @@ const Details = (props) => {
    var PROPID = props.location.aboutProps.name;
    
    return (
-       <div style={{textAlign:'center', paddingLeft:'35%', marginRight:'35%'}}>
-                             
-         {data.data.features.filter(x => x.id === PROPID).map((data) => (
-                  
+       <div style={{textAlign:'center', paddingLeft:'35%', marginRight:'35%'}}>                       
+         {data.data.features.filter(x => x.id === PROPID).map((data) => (         
             <div key = {data.id} style ={{paddingLeft:'10%', paddingRight:'10%'}}>
                <h2 style={{paddingBottom:'2%', textAlign:'center'}}>{data.properties.title}</h2>
             <div style={{display: 'flex', paddingLeft:'10%'}}>
@@ -33,7 +31,6 @@ const Details = (props) => {
                      Type:
                   </div>   
                </div>
-
                <div style={{width:'100%', textAlign:'left', justifyContent:'left', paddingLeft:'0%', marginRight:'-17.5%'}}>
                   <div style={{marginBottom: '5%'}}>
                      {data.properties.place}
@@ -60,5 +57,4 @@ const Details = (props) => {
       </div>
     );
 }
- 
 export default Details;
