@@ -10,42 +10,39 @@ function convertTime(time) {
 
 const home = () => {
     return (
-       <div style={{ paddingLeft:'30%', paddingRight:'30%'}}>
-          <h1 style={{textAlign:'center'}}>{data.data.metadata.title}</h1>
-            <div style={{display:'flex'}}>                
-                <div style={{width:'100%', textAlign:'center'}}>
-                    <h4>
-                        Place
-                        {data.data.features.map(data => (
-                        
-                            <div style={{paddingBottom:'2%', textAlign:'left'}} key={data.id}>
-                                
-                                <Link to ={{pathname:'/Details', aboutProps:{name: data.id}}}>
-                                {data.properties.place}
-                                </Link>
-                            </div>
-                        ))}
-                    </h4>
+        <div style={{ paddingLeft:'30%', paddingRight:'30%'}}>
+            <h1 style={{textAlign:'center'}}>{data.data.metadata.title}</h1>
+            <div style={{width:'100%', display:'flex'}}>
+
+                <div style={{ width:'33.3%', textAlign: 'center'}}>
+                    <h4> Place</h4>
                 </div>
-                <div style={{width:'100%', textAlign:'center'}}>
-                    <h4>
-                        Magnitude
-                        {data.data.features.map(data => (
-                            <div style={{paddingBottom:'2%', textAlign:'center'}} key={data.id}>{data.properties.mag}</div>
-                        ))}
-                    </h4>
+                <div style={{ width:'33.3%', textAlign: 'center'}}>
+                    <h4> Magnitude</h4>
                 </div>
-                <div style={{width:'100%', textAlign:'center'}}>
-                    <h4>
-                        Time
-                        {data.data.features.map(data => (
-                            
-                            <div style={{paddingBottom:'2%', textAlign:'center'}} key={data.id}>{convertTime(data.properties.time)}</div>
-                        ))}
-                    </h4>
+                <div style={{ width:'33.3%', textAlign: 'center'}}>
+                    <h4> Time</h4>
                 </div>
+
             </div>
-       </div>    
+            <div style={{width:'100%', display:'flex'}}>
+
+                <div style={{ width:'100%', textAlign: 'center'}}>
+                {data.data.features.map(data => (                  
+                    <div style={{paddingBottom:'2%', display:'flex', textAlign:'left'}} key={data.id}>
+                        
+                        <Link style={{width:'33.3%'}} to ={{pathname:'/Details', aboutProps:{name: data.id}}}>
+                        {data.properties.place}
+                        </Link>
+
+                        <div style={{width:'33.3%', textAlign:'center'}}> {data.properties.mag}</div>
+
+                        <div style={{width:'33.3%', textAlign:'center'}}> {convertTime(data.properties.time)}</div>
+                    </div>
+                ))}
+                </div>
+            </div>            
+        </div>    
     );
 }
 export default home;
